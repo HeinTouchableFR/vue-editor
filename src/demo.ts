@@ -4,6 +4,13 @@ const editor = new VisualEditor()
 
 editor.toFrench()
 
+editor.registerComponent("hero", {
+    title: "Hero",
+    fields: [
+
+    ],
+});
+
 editor.registerTemplate({
     name: "Template de test",
     image:
@@ -27,7 +34,7 @@ editor.registerTemplate({
                     type: "secondary",
                 },
             ],
-            _name: "hero 1",
+            _name: "hero",
         },
         {
             title: "Album 2 example",
@@ -68,7 +75,7 @@ editor.registerTemplate({
             _name: "hero",
         },
         {
-            title: "Album 3 example",
+            title: "Album 4 example",
             titleAlign: "left",
             content:
                 "<p>Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>",

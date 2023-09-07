@@ -9,19 +9,9 @@ if ($data['preview'] ?? null) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="module" src="/@vite/client"></script>
-    <script type="module">
-        import RefreshRuntime from "/@react-refresh"
-        RefreshRuntime.injectIntoGlobalHook(window)
-        window.$RefreshReg$ = () => {}
-        window.$RefreshSig$ = () => (type) => type
-        window.__vite_plugin_react_preamble_installed__ = true
-    </script>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/style-ui.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         :root {

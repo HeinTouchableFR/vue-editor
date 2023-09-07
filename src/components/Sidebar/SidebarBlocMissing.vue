@@ -12,8 +12,6 @@ const props = defineProps<{
 }>()
 const store = useStore()
 
-console.log(props.data.v)
-
 </script>
 
 <template>

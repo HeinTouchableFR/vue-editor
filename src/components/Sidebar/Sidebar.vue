@@ -68,10 +68,6 @@ const test = () => {
         >
           <Icon name='responsive' :size=25 />
         </button>
-        <Button type='button'>
-          <Icon additionalClass='m-right-1' name='plus' :size=20 />
-          {{ t('addComponent') }}
-        </Button>
       </div>
     </div>
     <SidebarEmpty v-if="state === States.BLOCS && showEmpty" :on-action="() => setState(States.TEMPLATES)" />
@@ -160,7 +156,7 @@ const test = () => {
     text-align: center;
   }
 
-  .sidebar__content {
+  .sidebar__content .smooth-dnd-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: functions.space(2);

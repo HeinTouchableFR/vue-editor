@@ -124,7 +124,7 @@
 <script type="module" src="http://localhost:5173/src/demo.ts"></script>
 <script>
     const editor1 = document.getElementById('editor1')
-    /*editor1.setAttribute('value', localStorage.getItem('editor1value') || JSON.stringify([
+    editor1.setAttribute('value', localStorage.getItem('editor1value') || JSON.stringify([
         {
             title: "Album example",
             titleAlign: "left",
@@ -142,8 +142,26 @@
                 }
             ],
             _name: "hero"
+        },
+        {
+            title: "Album example 2",
+            titleAlign: "left",
+            content: "<p>Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>",
+            buttons: [
+                {
+                    "label": "Main call to action",
+                    "url": "#",
+                    "type": "primary"
+                },
+                {
+                    "label": "Secondary action",
+                    "url": "#",
+                    "type": "secondary"
+                }
+            ],
+            _name: "hero"
         }
-    ]))*/
+    ]))
 </script>
 </body>
 </html>

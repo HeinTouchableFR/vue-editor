@@ -57,9 +57,7 @@ const handleClose = () => {
 }
 
 const test = () => {
-  console.log(store.getData)
   store.updateData([])
-  console.log(store.getData)
 }
 </script>
 
@@ -74,7 +72,7 @@ const test = () => {
     </Button>
     <div v-if="visible" class="vue-editor">
       <Sidebar :onClose=handleClose />
-      <Preview previewUrl=previewUrl />
+      <Preview :previewUrl=previewUrl />
     </div>
     <textarea :name=props.name v-model="cleanedData" @change={doNothing}></textarea>
   </div>

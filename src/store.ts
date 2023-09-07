@@ -3,6 +3,7 @@ import {defineStore} from "pinia";
 import {clamp} from "@/functions/number";
 import {deepSet, indexify} from "@/functions/object";
 import {t} from '@/functions/i18n'
+import {InsertPosition} from "@/enum";
 
 
 export enum PreviewModes {
@@ -57,5 +58,17 @@ export const useStore = defineStore('vue-editor', {
             this.rollbackMessage = t("deleteItemConfirm")
             this.data =  this.data.filter((d) => d !== removedData)
         },
+        setFocusIndex(id: string) {
+            this.focusIndex = id
+        },
+        setAddBlockIndex: function (index?: number | null) {
+            if (index === undefined) {
+                this.addBlockIndex = this.insertPosition === InsertPosition.Start
+                    ? 0
+                    : this.data.length
+                return
+            }
+            this.addBlockIndex = index
+        }
     }
 })
