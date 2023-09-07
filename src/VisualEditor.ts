@@ -145,7 +145,21 @@ export class VisualEditor {
                     templates: templates,
                     hiddenCategories: hiddenCategories,
                     insertPosition: (this.getAttribute('insertPosition') ??
-                        InsertPosition.Start) as InsertPosition
+                        InsertPosition.Start) as InsertPosition,
+                    previewUrl: this.getAttribute('preview') ?? '',
+                    iconsUrl: this.getAttribute('iconsUrl') ?? '/',
+                    name: this.getAttribute('name') ?? '/',
+                    onChange: (value: string) => {
+                        if (this._value === value) {
+                            return
+                        }
+                        this._value = value
+                        this.dispatchEvent(
+                            new CustomEvent('change', {
+                                detail: value,
+                            }),
+                        )
+                    }
                 })
 
                 app.use(pinia)

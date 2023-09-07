@@ -124,7 +124,7 @@
 <script type="module" src="http://localhost:5173/src/demo.ts"></script>
 <script>
     const editor1 = document.getElementById('editor1')
-    editor1.setAttribute('value', localStorage.getItem('editor1value') || JSON.stringify([
+    /*editor1.setAttribute('value', localStorage.getItem('editor1value') || JSON.stringify([
         {
             title: "Album example",
             titleAlign: "left",
@@ -143,7 +143,7 @@
             ],
             _name: "hero"
         }
-    ]))
+    ]))*/
 </script>
 </body>
 </html>
